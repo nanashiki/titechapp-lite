@@ -15,7 +15,6 @@ struct EventList: View {
                 EventRow()
                     .padding(.horizontal, -20)
                     .padding(.vertical, -8)
-                
             }
             .navigationBarTitle(Text("スケジュール"), displayMode: .inline)
         }
