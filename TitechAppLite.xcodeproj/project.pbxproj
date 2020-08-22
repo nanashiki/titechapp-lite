@@ -15,6 +15,10 @@
 		4C8389BD24E8FC4700F91CFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8389BC24E8FC4700F91CFC /* Preview Assets.xcassets */; };
 		4C8389C024E8FC4700F91CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8389BE24E8FC4700F91CFC /* LaunchScreen.storyboard */; };
 		4CDE81D424F1083F00115DB4 /* EventHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE81D324F1083F00115DB4 /* EventHeader.swift */; };
+		4CDE81D724F1172500115DB4 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE81D624F1172500115DB4 /* EventListViewModel.swift */; };
+		4CDE81DA24F1175F00115DB4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE81D924F1175F00115DB4 /* Event.swift */; };
+		4CDE81DD24F117D200115DB4 /* HourMinute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE81DC24F117D200115DB4 /* HourMinute.swift */; };
+		4CDE81DF24F1180E00115DB4 /* DateGroupEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE81DE24F1180E00115DB4 /* DateGroupEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		4C8389BF24E8FC4700F91CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C8389C124E8FC4700F91CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CDE81D324F1083F00115DB4 /* EventHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHeader.swift; sourceTree = "<group>"; };
+		4CDE81D624F1172500115DB4 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		4CDE81D924F1175F00115DB4 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		4CDE81DC24F117D200115DB4 /* HourMinute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourMinute.swift; sourceTree = "<group>"; };
+		4CDE81DE24F1180E00115DB4 /* DateGroupEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGroupEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,9 @@
 			children = (
 				4C8389B324E8FC4600F91CFC /* AppDelegate.swift */,
 				4C8389B524E8FC4600F91CFC /* SceneDelegate.swift */,
+				4CDE81DB24F117C800115DB4 /* Utility */,
+				4CDE81D824F1175200115DB4 /* Model */,
+				4CDE81D524F1170A00115DB4 /* ViewModel */,
 				4C149B8F24E8FFE900B5F16B /* View */,
 				4C8389B924E8FC4700F91CFC /* Assets.xcassets */,
 				4C8389BE24E8FC4700F91CFC /* LaunchScreen.storyboard */,
@@ -95,6 +106,31 @@
 				4C8389BC24E8FC4700F91CFC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4CDE81D524F1170A00115DB4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CDE81D624F1172500115DB4 /* EventListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4CDE81D824F1175200115DB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CDE81D924F1175F00115DB4 /* Event.swift */,
+				4CDE81DE24F1180E00115DB4 /* DateGroupEvent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CDE81DB24F117C800115DB4 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				4CDE81DC24F117D200115DB4 /* HourMinute.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,7 +207,11 @@
 				4C149B9124E9001F00B5F16B /* EventList.swift in Sources */,
 				4C8389B424E8FC4600F91CFC /* AppDelegate.swift in Sources */,
 				4C8389B624E8FC4600F91CFC /* SceneDelegate.swift in Sources */,
+				4CDE81DF24F1180E00115DB4 /* DateGroupEvent.swift in Sources */,
+				4CDE81DD24F117D200115DB4 /* HourMinute.swift in Sources */,
+				4CDE81D724F1172500115DB4 /* EventListViewModel.swift in Sources */,
 				4C149B9424E9004F00B5F16B /* EventRow.swift in Sources */,
+				4CDE81DA24F1175F00115DB4 /* Event.swift in Sources */,
 				4CDE81D424F1083F00115DB4 /* EventHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
