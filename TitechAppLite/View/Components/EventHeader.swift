@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EventHeader: View {
     let dateLabel: String
-    
+
     var body: some View {
         HStack {
             Rectangle()
@@ -29,5 +29,6 @@ struct EventHeader: View {
 struct EventHeader_Previews: PreviewProvider {
     static var previews: some View {
         EventHeader(dateLabel: "9月10日 木曜日")
+            .previewLayout(.sizeThatFits)
     }
 }
