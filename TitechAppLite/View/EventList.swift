@@ -14,14 +14,14 @@ struct EventList: View {
             List {
                 ForEach(0..<1000) { _ in
                     Section(
-                        header: EventHeader().listRowInsets(EdgeInsets())
+                        header: EventHeader()
                     ) {
                         ForEach(0..<2) { _ in
                             EventRow()
-                                .listRowInsets(EdgeInsets())
                         }
                     }
                 }
+                .listRowInsets(EdgeInsets())
             }
             .navigationBarTitle(Text("スケジュール"), displayMode: .inline)
         }
