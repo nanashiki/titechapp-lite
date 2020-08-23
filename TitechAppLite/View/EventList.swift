@@ -11,10 +11,17 @@ import SwiftUI
 struct EventList: View {
     var body: some View {
         NavigationView {
-            List(0..<10) { _ in
-                EventRow()
-                    .padding(.horizontal, -20)
-                    .padding(.vertical, -8)
+            List {
+                ForEach(0..<1000) { _ in
+                    Section(
+                        header: EventHeader()
+                    ) {
+                        ForEach(0..<2) { _ in
+                            EventRow()
+                        }
+                    }
+                }
+                .listRowInsets(EdgeInsets())
             }
             .navigationBarTitle(Text("スケジュール"), displayMode: .inline)
         }
