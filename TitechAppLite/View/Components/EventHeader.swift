@@ -9,12 +9,14 @@
 import SwiftUI
 
 struct EventHeader: View {
+    let dateLabel: String
+
     var body: some View {
         HStack {
             Rectangle()
                 .foregroundColor(Color("grayMain"))
                 .frame(width: 5)
-            Text("9月10日 木曜日")
+            Text(dateLabel)
                 .foregroundColor(Color("grayMain"))
                 .font(Font.system(size: 13))
             Spacer()
@@ -26,6 +28,7 @@ struct EventHeader: View {
 
 struct EventHeader_Previews: PreviewProvider {
     static var previews: some View {
-        EventHeader()
+        EventHeader(dateLabel: "9月10日 木曜日")
+            .previewLayout(.sizeThatFits)
     }
 }

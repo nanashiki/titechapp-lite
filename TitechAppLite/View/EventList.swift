@@ -9,21 +9,26 @@
 import SwiftUI
 
 struct EventList: View {
+    @ObservedObject var viewModel = EventListViewModel()
+
     var body: some View {
         NavigationView {
             List {
-                ForEach(0..<1000) { _ in
+                ForEach(viewModel.groupEvents) { groupEvent in
                     Section(
-                        header: EventHeader()
+                        header: EventHeader(dateLabel: groupEvent.dateLabel)
                     ) {
-                        ForEach(0..<2) { _ in
-                            EventRow()
+                        ForEach(groupEvent.events) { event in
+                            EventRow(event: event)
                         }
                     }
                 }
                 .listRowInsets(EdgeInsets())
             }
             .navigationBarTitle(Text("スケジュール"), displayMode: .inline)
+        }
+        .onAppear {
+            self.viewModel.appear()
         }
     }
 }
