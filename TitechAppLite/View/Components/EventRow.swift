@@ -17,10 +17,10 @@ struct EventRow: View {
                 .foregroundColor(Color("main"))
                 .frame(width: 5)
             VStack(alignment: .leading, spacing: 24) {
-                Text("\(String(format: "%02d", event.startAt.hour)):\(String(format: "%02d", event.startAt.minute))")
+                Text(timeString(event.startAt))
                     .font(.system(size: 13))
                     .foregroundColor(Color("textMain"))
-                Text("\(String(format: "%02d", event.endAt.hour)):\(String(format: "%02d", event.endAt.minute))")
+                Text(timeString(event.endAt))
                     .font(.system(size: 13))
                     .foregroundColor(Color("textSub"))
             }
@@ -50,6 +50,14 @@ struct EventRow: View {
                 .padding(.trailing, 16)
         }
     }
+    
+    func timeString(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.timeZone = TimeZone(identifier: "Asia/Tokyo")
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: date)
+    }
 }
 
 struct EventRow_Previews: PreviewProvider {
@@ -59,8 +67,8 @@ struct EventRow_Previews: PreviewProvider {
                 id: UUID().uuidString,
                 title: "電気的モデリングとシミュレーション",
                 description: "RC回路シミュレーション",
-                startAt: HourMinute(hour: 9, minute: 0),
-                endAt: HourMinute(hour: 10, minute: 30),
+                startAt: Date(timeIntervalSince1970: 0),
+                endAt: Date(timeIntervalSince1970: 5400),
                 location: "W833,G114"
             )
         )

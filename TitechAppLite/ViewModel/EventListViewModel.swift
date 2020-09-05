@@ -21,16 +21,16 @@ class EventListViewModel: ObservableObject {
                         id: UUID().uuidString,
                         title: "電気的モデリングとシミュレーション",
                         description: "RC回路シミュレーション",
-                        startAt: HourMinute(hour: 9, minute: 0),
-                        endAt: HourMinute(hour: 10, minute: 30),
+                        startAt: Date(timeIntervalSince1970: 0),
+                        endAt: Date(timeIntervalSince1970: 5400),
                         location: "W833,G114"
                     ),
                     Event(
                         id: UUID().uuidString,
                         title: "情報基盤・データ活用概論",
                         description: "講義説明（＋インストールガイダンス資料）",
-                        startAt: HourMinute(hour: 9, minute: 0),
-                        endAt: HourMinute(hour: 10, minute: 30),
+                        startAt: Date(timeIntervalSince1970: 5400),
+                        endAt: Date(timeIntervalSince1970: 7200),
                         location: "W833"
                     )
                 ]
@@ -42,8 +42,8 @@ class EventListViewModel: ObservableObject {
                         id: UUID().uuidString,
                         title: "情報基盤・データ活用概論",
                         description: "講義説明（＋インストールガイダンス資料）",
-                        startAt: HourMinute(hour: 9, minute: 0),
-                        endAt: HourMinute(hour: 10, minute: 30),
+                        startAt: Date(timeIntervalSince1970: 0),
+                        endAt: Date(timeIntervalSince1970: 5400),
                         location: "W833"
                     )
                 ]

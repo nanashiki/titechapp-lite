@@ -12,7 +12,7 @@ struct Event: Identifiable {
     let id: String
     let title: String
     let description: String
-    let startAt: HourMinute
-    let endAt: HourMinute
+    let startAt: Date
+    let endAt: Date
     let location: String
 }
